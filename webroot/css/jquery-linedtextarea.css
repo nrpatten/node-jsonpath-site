@@ -53,7 +53,7 @@ textarea { resize:both; }
        border-right: 1px solid #C0C0C0;
        margin-right: 0px;
        padding: 0px 20px 0px 0px;
-       margin: 8px -20px 0px 0px;
+       margin: 0px -20px 0px 0px;
 }
 
 .linedwrap .codelines {

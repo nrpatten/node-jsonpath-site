@@ -184,3 +184,9 @@ pre {
     padding-right: 0.5em;
     margin: 12px 0px 8px;
 }
+
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 17px;
+}
