@@ -1,0 +1,159 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>JSON Path Test</title>
+  <meta name="description" content="JSONPath Online Evaluator">
+  <link href="css/lumen.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jsonpath.js"></script>
+  <script src="js/dump.js"></script>
+</head>
+<body>
+<a href="https://github.com/nrpatten/node-jsonpath-site"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+<nav class="navbar navbar-default" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<a class="navbar-brand" href="#">{"JSON":{"Path":"Test"}}</a>
+</div>
+</div>
+</nav>
+    <div class="row-fluid">
+      <div class="span6">
+        <h2>Inputs</h2>
+        <label>JSONPath Syntax</label>
+        <form class="margin-bottom">
+          <input class="form-control" type="text" placeholder="Put JSONPath syntax" value="data.phoneNumbers[*].type" />
+          <span class="help-block">Example: <span class="label label-default">data.phoneNumbers[1].type</span> Output: <span class="label label-default">'1' => "Home"</span>
+          <label>JSON <span class="label label-success">Paste your json data below to find your json path</span></label>
+          <textarea class="form-control" rows="23" cols="80">
+{
+    "data": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "age": 26,
+        "address": {
+            "streetAddress": "Queen Street",
+            "city": "Sydney",
+            "postalCode": "2000"
+        },
+        "phoneNumbers": [{
+            "type": "Mobile",
+            "number": "0404678682"
+        }, {
+            "type": "Home",
+            "number": "0246758223"
+        }, {
+            "type": "Work",
+            "number": "0246752343"
+        }]
+    }
+}
+          </textarea>
+        </form>
+      </div>
+      <div class="span6">
+        <h2>Results</h2>
+        <label>JSON Output</label>
+        <pre class="result">false</pre>
+      </div>
+<div class="span6">
+   <div class="jumbotron">
+    <table class="table table-striped table-hover">
+        <tr>
+            <td> <strong>XPath</strong> </td>
+            <td> <strong>JSONPath</strong> </td>
+            <td> <strong>Description</strong> </td>
+        </tr>
+        <tr class="info">
+            <td> / </td>
+            <td> $ </td>
+            <td class="lft">the root object/element </td>
+        </tr>
+        <tr>
+            <td> . </td>
+            <td> @ </td>
+            <td class="lft">the current object/element </td>
+        </tr>
+        <tr class="info">
+            <td> / </td>
+            <td> . or [] </td>
+            <td class="lft">child operator </td>
+        </tr>
+        <tr>
+            <td> .. </td>
+            <td> n/a </td>
+            <td class="lft">parent operator </td>
+        </tr>
+        <tr class="info">
+            <td> // </td>
+            <td> .. </td>
+            <td class="lft">recursive descent. JSONPath borrows this syntax from E4X. </td>
+        </tr>
+        <tr>
+            <td> * </td>
+            <td> * </td>
+            <td class="lft">wildcard. All objects/elements regardless their names. </td>
+        </tr>
+        <tr class="info">
+            <td> @ </td>
+            <td> n/a </td>
+            <td class="lft">attribute access. JSON structures don't have attributes. </td>
+        </tr>
+        <tr>
+            <td> [] </td>
+            <td> [] </td>
+            <td class="lft">subscript operator. XPath uses it to iterate over element collections and for <a href="http://www.w3.org/TR/xpath#predicates">predicates</a>. In Javascript and JSON it is the native array operator. </td>
+        </tr>
+        <tr class="info">
+            <td> | </td>
+            <td> [,] </td>
+            <td class="lft">Union operator in XPath results in a combination of node sets. JSONPath allows alternate names or array indices as a set. </td>
+        </tr>
+        <tr>
+            <td> n/a </td>
+            <td> [start:end:step] </td>
+            <td class="lft">array slice operator borrowed from ES4. </td>
+        </tr>
+        <tr class="info">
+            <td> [] </td>
+            <td> ?() </td>
+            <td class="lft">applies a filter (script) expression. </td>
+        </tr>
+        <tr>
+            <td> n/a </td>
+            <td> () </td>
+            <td class="lft">script expression, using the underlying script engine. </td>
+        </tr>
+        <tr class="info">
+            <td> () </td>
+            <td> n/a </td>
+            <td class="lft">grouping in Xpath </td>
+        </tr>
+    </table>
+   </div>
+</div>
+    </div>    
+  </div>
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/jquery.textchange.min.js"></script>
+
+  <script>
+    var evaluate = function(event, previousText){
+        var query = $("input").val();
+        var json = JSON.parse($("textarea").val().replace(/(\r\n|\n|\r)/gm,""));
+        var result = jsonPath(json, query);
+        $(".result").empty();
+        if(result) {
+          $(".result").append(dump(result));
+        }
+    }
+
+    $(document).ready(function(){
+      $('input').bind('textchange', evaluate);
+      $('textarea').bind('textchange', evaluate);
+      evaluate();
+    });
+  </script>
+</body>
+</html>

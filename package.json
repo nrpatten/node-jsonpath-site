@@ -1,0 +1,27 @@
+{
+"name": "node-jsonpath-site",
+"version": "0.0.1",
+"description": "node.js based jsonpath website",
+"main": "app",
+"dependencies": {
+},
+"devDependencies": {},
+"scripts": {
+"test": "echo \"Error: no test specified\" && exit 1",
+"start": "node app"
+},
+"repository": {
+"type": "git",
+"url": "git://github.com/nrpatten/node-jsonpath-site.git"
+},
+"author": "NRPatten",
+"license": "MIT",
+"bugs": {
+"url": "https://github.com/nrpatten/node-jsonpath-site/issues"
+},
+"homepage": "https://github.com/nrpatten/node-jsonpath-site",
+"keywords": [
+"json",
+"jsonpath"
+]
+}

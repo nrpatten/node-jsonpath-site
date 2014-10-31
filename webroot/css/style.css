@@ -1,0 +1,155 @@
+@import url(http://fonts.googleapis.com/css?family=Questrial);
+body {
+    font-family: "Questrial","Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 2.429;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    height: 100%;
+    color: #555;
+}
+
+#info {
+    margin-top: 50px;
+}
+
+.help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.label {
+    font-weight: normal;
+    font-size: small;
+}
+
+.margin-bottom {
+    margin-bottom: 15px;
+}
+
+.navbar > .container .navbar-brand, 
+.navbar > .container-fluid .navbar-brand {
+    margin-left: 60px;
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
+}
+
+.navbar-brand {
+    line-height: 15px;
+    height: 50px;
+    font-size: 30px;
+    padding: 15px 0px 0px 350px;
+    float: left;
+    text-shadow: 2px 2px #808080;
+}
+
+.row-fluid [class*="span"]:first-child {
+    margin-left: 10px;
+}
+
+.row-fluid .span6 {
+    width: 48%;
+}
+
+.row-fluid [class*="span"] {
+    display: block;
+    min-height: 28px;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.12766%;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 42px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #FFF;
+    background-image: none;
+    border: 1px solid #E7E7E7;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, 
+.table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #F9F9F9;
+    border-left: 1px solid #555;
+    border-right: 1px solid #555;
+}
+
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857;
+    vertical-align: top;
+    text-align: center;
+    border-left: 1px solid #555 !important;
+    border-right: 1px solid #555 !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #555 !important;
+}
+
+.jumbotron {
+    padding-top: 10px !important;
+    padding-bottom: 0px !important;
+}
+
+.jumbotron {
+    padding: 10px;
+    margin-bottom: 10px;
+    color: inherit;
+    background-color: #FAFAFA;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.table .lft {
+    text-align: left;
+}
+
+.table-striped .lft {
+    text-align: left;
+}
+
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info, 
+.table > tfoot > tr > td.info, 
+.table > thead > tr > th.info, 
+.table > tbody > tr > th.info, 
+.table > tfoot > tr > th.info, 
+.table > thead > tr.info > td, 
+.table > tbody > tr.info > td, 
+.table > tfoot > tr.info > td, 
+.table > thead > tr.info > th, 
+.table > tbody > tr.info > th, 
+.table > tfoot > tr.info > th {
+    background-color: #999;
+}
+
+.table-hover > tbody > tr > td.info:hover,
+.table-hover > tbody > tr > th.info:hover,
+.table-hover > tbody > tr.info:hover > td,
+.table-hover > tbody > tr:hover > .info,
+.table-hover > tbody > tr.info:hover > th {
+    background-color: #8D8C8C;
+}
