@@ -153,3 +153,34 @@ input, textarea {
 .table-hover > tbody > tr.info:hover > th {
     background-color: #8D8C8C;
 }
+
+.success {
+    background: none repeat scroll 0% 0% #E6EFC2;
+    color: #529214;
+    border-color: #C6D880;
+}
+
+.error {
+    background: none repeat scroll 0% 0% #FBE3E4;
+    color: #D12F19;
+    border-color: #FBC2C4;
+}
+
+.error, .success {
+    margin-bottom: 1em;
+    border: 2px solid #DDD;
+    padding: 0.8em;
+}
+
+pre {
+    white-space: pre;
+    
+}
+
+#validate {
+    font-size: 1.2em;
+    color: #333;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin: 12px 0px 8px;
+}
