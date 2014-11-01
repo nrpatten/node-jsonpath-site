@@ -10,3 +10,7 @@ npm install
 
 # Configuration
 To configure, Edit `app.js` line 6 and 7 add your host and port, Thats it.
+
+# Usage
+Paste your json in the text box and you can Validate it and or use the syntax box to find the path you need.
+See the default for examples.
