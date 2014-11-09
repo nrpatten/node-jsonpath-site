@@ -246,3 +246,14 @@ textarea {
     border-collapse: separate;
     padding: 0px 0px 0px;
 }
+
+.footer {
+    clear: both;
+    text-align: center;
+    padding: 4px 0px 0px;
+    font-size: 11px;
+    width: 100%;
+    margin-bottom: 1px !important;
+    background-color: #E7E7E7;
+    border-bottom: 2px solid #CCC;
+}
