@@ -15,5 +15,7 @@ To configure, Edit `app.js` line 6 and 7 add your host and port, Thats it.
 Type `npm start` or type `node app` `nodejs app`.
 
 # Usage
-Paste your json in the text box and you can Validate it and or use the syntax box to find the path you need.
-See the default for examples.
+* Paste your json in the text box and you can Validate it.
+ * Use the syntax box to find the path you need.
+ * Paste Your JSON URL int the URL box to get JSON data from a URL.
+ * See the default for examples.
