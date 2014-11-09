@@ -6,9 +6,9 @@
     <title>JSON Path Test</title>
     <meta name="description" content="JSON Path Online Test Site">
     <script type="text/javascript">
-    if (typeof JSON === 'undefined') {
-        document.write('<sc' + 'ript type="text/javascript" src="js/json2.js"></sc' + 'ript>');
-    }
+        if (typeof JSON === 'undefined') {
+            document.write('<sc' + 'ript type="text/javascript" src="js/json2.js"></sc' + 'ript>');
+        }
     </script>
     <link href="css/lumen.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -41,12 +41,18 @@
             <span class="help-block">Example: <span class="label label-default">data.phoneNumbers[1].type</span> Output: <span class="label label-default"> => "Home"</span>
             <form class="margin-bottom" id="JSONValidate" method="post" action="." name="JSONValidate">
                 <label>JSON URL</label>
-                <input id="url" class="form-control" type="url" placeholder="Past Your JSON URL Here" value="http://api.icndb.com/jokes/random" />
-                <label>JSON <span class="label label-success">Paste your JSON data below or paste your JSON URL, Click Validate to validate and test your JSON.</span>
-                </label>
+                <div class="input-group add-on">
+                    <input id="url" class="form-control" type="url" placeholder="Past Your JSON URL Here" value="http://api.icndb.com/jokes/random" />
+                    <div class="input-group-btn">
+                        <a href="#" class="btn btn-default" type="submit">Get URL</a>
+                    </div>
+                </div>
                 <input type="hidden" id="reformat" value="1" />
                 <input type="hidden" id="compress" value="0" />
-                <textarea id="json_input" name="json_input" class="json_input" rows="23" cols="80" wrap="off">
+            </form>
+            <label>JSON <span class="label label-success">Paste your JSON data below or paste your JSON URL, Click Validate to validate and test your JSON.</span>
+            </label>
+            <textarea id="json_input" name="json_input" class="json_input" rows="23" cols="80" wrap="off">
 {
     "data": {
         "firstName": "John",
@@ -69,12 +75,11 @@
         }]
     }
 }
-                </textarea>
-                <br />
-                    <div>
-                        <button name="validate" id="validate" value="Validate" class="button left bold">Validate</button>
-                    </div>
-            </form>
+            </textarea>
+            <br />
+            <div>
+                <button name="validate" id="validate" value="Validate" class="button left bold">Validate</button>
+            </div>
             <pre id="results">Is your JSON Valid ?</pre>
         </div>
         <div class="span6">
@@ -159,7 +164,6 @@
                 </table>
             </div>
         </div>
-    </div>
     </div>
 
     <script src="js/jsonp.js" type="text/javascript"></script>
