@@ -34,7 +34,7 @@ input, textarea {
 
 .navbar > .container .navbar-brand, 
 .navbar > .container-fluid .navbar-brand {
-    margin-left: 60px;
+    margin-left: 0px;
 }
 
 .navbar-default .navbar-brand {
@@ -45,9 +45,11 @@ input, textarea {
     line-height: 15px;
     height: 50px;
     font-size: 30px;
-    padding: 15px 0px 0px 350px;
-    float: left;
+    padding: 15px 0px 0px 0px;
     text-shadow: 2px 2px #808080;
+    float: left;
+    width: 100%;
+    text-align: center;
 }
 
 .row-fluid [class*="span"]:first-child {
@@ -227,4 +229,8 @@ textarea {
   border-bottom-width: 0px;
   color: #555;
   background-color: #D3D3D3;
+}
+
+.navbar-header {
+    float: inherit;
 }
