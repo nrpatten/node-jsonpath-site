@@ -183,6 +183,7 @@
                 var getdata = $('#url').val();
                 $.jsonp({
                     url: getdata,
+                    corsSupport: true,
                     success: function(data) {
                         $('textarea').val(JSON.stringify(data));
                     }
